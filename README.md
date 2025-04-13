@@ -30,61 +30,72 @@ This repository provides a practical demonstration of integrating tools with AI 
 
 ## 🛠️ Setup
 
-Follow these steps to set up your environment:
+Follow these steps carefully to set up your environment:
 
 1. **Prerequisites**:
 
    - Ensure you have **Python 3.12** installed.
-
-2. **Create and Activate Virtual Environment**:
-
-   - Open your terminal in the project's root directory.
-   - Create a virtual environment named `.venv`:
-     ```bash
-     python3.12 -m venv .venv
-     ```
-   - Activate the virtual environment:
-     - **macOS/Linux (Bash/Zsh):**
-       ```bash
-       source .venv/bin/activate
-       ```
-     - **Windows (Command Prompt/PowerShell):**
-       ```bash
-       .\.venv\Scripts\activate
-       ```
-
-3. **Install Dependencies**:
-
    - Install `uv` if not already installed:
      ```bash
      pip install uv
      ```
-   - Use `uv` to install project dependencies:
-     ```bash
-     uv pip install -e .
-     ```
 
-4. **Configure Environment Variables**:
-   - Create a `.env` file in the project's root directory.
-   - Add your API keys to the file:
+2. **Navigate to Project Directory**:
+   ```bash
+   cd mcp_autogen_sse_stdio
+   ```
+
+3. **Create and Activate Virtual Environment**:
+
+   ```bash
+   # Create virtual environment using uv
+   uv venv --python 3.12
+
+   # Activate the virtual environment
+   source .venv/bin/activate  # On macOS/Linux
+   # OR
+   .\.venv\Scripts\activate  # On Windows
+   ```
+
+4. **Install Dependencies**:
+
+   ```bash
+   # Install project dependencies
+   uv pip install -e .
+   ```
+
+   **Troubleshooting Note**: If you encounter any issues with the MCP CLI installation, you can manually install it:
+
+   ```bash
+   uv add "mcp[cli]"
+   ```
+
+5. **Configure Environment Variables**:
+   - Create a `.env` file in the `mcp_autogen_sse_stdio` directory.
+   - Add your API keys:
      ```dotenv
      OPENAI_API_KEY=your_openai_api_key_here
      APIFY_API_KEY=your_apify_api_key_here
      ```
-   - You can obtain an Apify API key from the [Apify MCP Server page](https://apify.com/apify/actors-mcp-server).
+   - Get your Apify API key from [Apify MCP Server page](https://apify.com/apify/actors-mcp-server)
 
-## 🚀 How to Run
+## 🚀 Running the Project
 
-Ensure your virtual environment is activated and dependencies are installed. Then, run the main script using `uv`:
+1. Make sure you're in the parent directory (one level up from the project directory):
 
-```bash
-uv run python mcp-server-examples/main.py
-```
+   ```bash
+   cd ..
+   ```
 
-This will:
+2. Run the main script using `uv`:
+   ```bash
+   uv run mcp_autogen_sse_stdio/main.py
+   ```
 
-1. Run a demo that summarizes news about Iran-US negotiations using the Apify tool.
-2. Solve a simple math problem: `(3 + 5) x 12` using the local math tool.
+This will run the demo that:
+
+1. Summarizes news about Iran-US negotiations using the Apify tool
+2. Solves a simple math problem: `(3 + 5) x 12` using the local math tool
 
 ## 🔌 Understanding MCP (Model Context Protocol)
 
