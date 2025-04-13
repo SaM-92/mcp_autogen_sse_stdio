@@ -1,0 +1,17 @@
+[project]
+name = "mcp-server-examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "autogen-ext",
+    "autogen-agentchat",
+    "autogen-core",
+    "python-dotenv",
+    "openai",
+    "tiktoken",
+    "json_schema_to_pydantic"
+]
+
