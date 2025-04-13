@@ -41,6 +41,7 @@ Follow these steps carefully to set up your environment:
      ```
 
 2. **Navigate to Project Directory**:
+
    ```bash
    cd mcp_autogen_sse_stdio
    ```
@@ -129,7 +130,7 @@ Our `main.py` demonstrates:
 3. **Agent Creation**:
 
    - Creates an AutoGen assistant with both tool sets
-   - Uses GPT-3.5-Turbo as the base model
+   - Uses GPT-4 as the base model
 
 4. **Task Execution**:
    - Runs two demo tasks showing both tools in action
