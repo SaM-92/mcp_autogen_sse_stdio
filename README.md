@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/sam-92-mcp-autogen-sse-stdio-badge.png)](https://mseep.ai/app/sam-92-mcp-autogen-sse-stdio)
+
 # 🤖 MCP Server Examples with AutoGen
 
 This repository provides a practical demonstration of integrating tools with AI agents using the **Model Context Protocol (MCP)** within the **AutoGen** framework.
